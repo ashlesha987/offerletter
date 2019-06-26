@@ -17,9 +17,9 @@ cursor = db.cursor(MySQLdb.cursors.DictCursor)
 
  
 cur = db.cursor()
-cursor.execute("select first_name, last_name, gender, start_date, end_date, course, collegename, branch from personal_user inner join internship_certificate on personal_user.id=internship_certificate.id")
+cursor.execute("select first_name, last_name, gender, start_date, end_date, course, collegename, branch from personal_user inner join internship_certificate on personal_user.id=internship_certificate.personal_id")
 rows_ListOfDict=cursor.fetchall()
-#print rows_ListOfDict
+print rows_ListOfDict
 
 
 
